@@ -1,0 +1,7 @@
+Flash 的，在代码里用 md5 比对红包代码。对了进入下一个场景。
+在另一个场景中，藏着 lv2 的线索。
+
+61909386 = 28e131dd7a727aa676ad1f97b6cd12e5
+^8 = a069b955f2faf22efe25971f3e459a6d
+
+flash standalone player: https://www.adobe.com/support/flashplayer/debug_downloads.html

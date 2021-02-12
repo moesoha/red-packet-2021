@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>2021 新年快乐！</title>
+		<style>	
+			.main {
+				width: 100%;
+			}
+			#flashContent {
+				margin: auto;
+				width: 960px;
+				height: 640px;
+				text-align: center;
+			}
+		
+			#tips {
+				position: fixed;
+				z-index: 10;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background-color: rgba(0,0,0,.4);
+				transition: ease all 1s;
+				overflow: auto;
+			}
+			#tips.close {
+				opacity: 0;
+				background-color: rgba(0,0,0,0);
+				pointer-events: none;
+			}
+			#tips > div {
+				max-width: 80%;
+				background-color: #fff;
+				border-radius: 4px;
+				position: relative;
+				left: 50%;
+				top: 48px;
+				transform: translateX(-50%);
+				padding: .4em .7em;
+				margin: 1em 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div class="main">
+				<div id="flashContent">
+					<iframe style="width:100%;height:100%;" src="flash.html" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+				</div>
+
+				<script src="swfobject.js"></script>
+				<script type="text/javascript">
+					var flashUrl = "2021hb.swf";
+					var so = new SWFObject(flashUrl, "2021hb", "960", "640", "8", "#FFFFFF");
+					so.addParam("menu", "false");
+					so.addParam("wmode", "opaque");
+					so.addParam("allowFullScreen", "false");
+					so.addParam("allowScriptAccess", "always");
+					so.addParam("allowFullScreenInteractive", "true");
+					so.addParam("quality", "high");
+					so.write("flashContent");
+				</script>
+			</div>
+			<div id="tips">
+				<div>
+					<h2>在拿红包之前，你最好先了解这些内容。</h2>
+					<ol style="font-size: 1.2rem;">
+						<li>这是一个类似 CTF 的闯关游戏，利用你的知识（现学也是可以的啦）解决所有题目，获得红包口令，进入支付宝领取红包。</li>
+						<li>你需要电脑上的工具才能愉快玩耍。</li>
+						<li>你拿到的所有答案都是八位数字，为了方便控制开始和结束时间，在支付宝领取时，前面需要加上一个“牛”字。如解题得到 66741003，那么最后的红包口令是“牛66741003”。</li>
+						<li>如果你是和别人一起完成的，希望你们能只领取一次，然后大家分。</li>
+						<li>本次活动时间从 2021 年 2 月 11 日 20 时开始，持续 24 个小时，如果红包都被提前领完，则游戏提前结束。</li>
+						<li>共有 2 个红包<!--不包括彩蛋红包-->，第 1 个红包总额 58 人民币元，分 26 个；第 2 个红包总额 58 人民币元，分 26 个。红包领取规则均为“拼手气红包”。</li>
+						<li>这个游戏由 Soha 制作，在游戏结束后也将在 Soha 的博客<a href="https://soha.moe/post/find-soha-red-packet-2021.html">相关页面</a>上放出题解。如有疑问也请通过博客的“关于我”页面上所述的联系方式联系。</li>
+						<li style="color: #ff084a">最后祝大家，新年快乐！</li>
+						<!-- <li>还有一个彩蛋红包，与 SWF 中的内容无关，是一个隐藏的小红包。自己找吧！</li> -->
+						<li>
+							因为看见大家普遍走进了死胡同，特给出以下提示：1、SWF 中直接出现的数字肯定不是红包。2、域名是肯定有解析的。3、当爆破不出来的时候，应该很自然的想到代码里有毒。因为不可能自己改 MD5 算法，毕竟自己改的东西没有经过算法验证，而且改了也就不叫 MD5 了，那么就可以排除掉 MD5 类里面和 MD5 计算有关的代码。
+						</li>
+					</ol>
+					<button onclick="document.getElementById('tips').classList.add('close');">我读完了</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
